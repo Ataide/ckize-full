@@ -1,0 +1,52 @@
+         <div class="modal modal-styled">
+
+          <div class="modal-dialog">
+
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <button type="button" class="close" ng-click="$hide()" aria-hidden="true">&times;</button>
+                <h3 class="modal-title">Meu Profile</h3>
+              </div> <!-- /.modal-header -->
+
+              <div class="modal-body">
+                <h2>Inline form: control states</h2>       
+
+                <form role="form">
+                  <div class="form-group">
+                    <label for="display_name">Nome</label>
+                    <input class="form-control" name="display_name" ng-model="profile.dataupdate.display_name" type="text">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input class="form-control" name="email" ng-model="profile.dataupdate.email" type="text">
+                  </div>
+                  <div class="form-group">
+                    <label for="home_page">Site</label>
+                    <input class="form-control" name="home_page" ng-model="profile.dataupdate.home_page" type="text">
+                  </div>
+                  <div class="form-group">
+                    <label for="location">Localização</label>
+                    <input class="form-control" name="location" ng-model="profile.dataupdate.address" type="text">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="aboutme">Sobre</label>
+                    <textarea class="form-control" name="aboutme" ng-model="profile.dataupdate.aboutme" type="text"></textarea>
+                  </div>
+
+                </form>
+
+
+
+
+              </div> <!-- /.modal-body -->
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" ng-click="$hide()">Close</button>
+                <button type="button" class="btn btn-success" ng-click="profile.saveChanges()">Salvar alterações</button>
+              </div> <!-- /.modal-footer -->
+
+            </div> <!-- /.modal-content -->
+
+          </div><!-- /.modal-dialog -->
