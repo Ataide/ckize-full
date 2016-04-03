@@ -5,16 +5,22 @@ module.exports = function(grunt){
     clean:{
       dist: ['./dist']
     },
+
 		watch:{
 			options:{livereload:true},
 			files:['index.html'],
 			tasks:[]
 		},
+
     concat:{
       dist:{
         src: 'scripts/**.js',
         dest: 'dist/scripts-all.js'
       },
+			teste:{
+				src: ['components/**.js', 'components/**/**.js', 'scripts/**.js'],
+				dest: 'dist/script.all.js'
+			},
       libs:{
         src: [
           'bower_components/angular/angular.min.js',
@@ -42,7 +48,7 @@ module.exports = function(grunt){
 				options:{
 					port:3000,
 					hostname:'localhost',
-					bases:['../app'],
+					bases:['../ckize-full/'],
 					livereload:true
 				}
 			}

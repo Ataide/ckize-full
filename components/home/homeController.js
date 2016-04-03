@@ -8,18 +8,18 @@
         .module('app')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['$http', '$auth']
+    HomeController.$inject = ['$http', '$auth'];
 
     function HomeController($http, $auth) {
 
         var vm = this;
 
-        vm.users;
-        vm.error;
+        vm.users = {};
+        vm.error = {};
 
         vm.isAuthenticated = function(){
           return $auth.isAuthenticated();
-        }
+        };
 
         vm.getUsers = function() {
 
@@ -30,7 +30,7 @@
             }).error(function(error) {
                 vm.error = error;
             });
-        }
+        };
     }
 
 })();

@@ -1,21 +1,20 @@
 (function(){
 
-  'use strict'
+  'use strict';
 
   angular
     .module('app')
-    .controller('navbarController' , navbarController);
+    .controller('NavbarController' , NavbarController);
 
-    navbarController.$inject = ['$http','$auth','$state'];
+    NavbarController.$inject = ['$http','$auth','$state'];
 
-    function navbarController($http,$auth,$state){
-
+    function NavbarController($http,$auth,$state){
       var vm = this;
 
       vm.logOut = function(){
         $auth.logout();
         $state.go('login', {},{reload:true});
-      }
+      };
 
     }
 

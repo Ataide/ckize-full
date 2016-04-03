@@ -6,6 +6,8 @@
       .module('app')
       .controller('MainController' , MainController);
 
+      MainController.$inject = ['$scope', '$auth', '$state'];
+
       function MainController($scope, $auth, $state){
         $scope.modal = {
         "title": "Title",
@@ -14,7 +16,7 @@
 
         $scope.isAuthenticated = function(){
           return $auth.isAuthenticated();
-        }
+        };
 
       }
 })();

@@ -5,8 +5,8 @@
     'use strict';
 
     angular
-        .module('app', ['ui.router', 'satellizer', 'mgcrea.ngStrap','ngFileUpload', 'ngAnimate', 'angular-jwt','angular-loading-bar','ngImgCrop'])
-        .config(function($stateProvider, $urlRouterProvider, $authProvider, API_URL) {
+        .module('app', ['ui.router','ngMessages', 'satellizer', 'mgcrea.ngStrap','ngFileUpload', 'ngAnimate', 'angular-jwt','angular-loading-bar','ngImgCrop'])
+        .config(['$stateProvider', '$urlRouterProvider', '$authProvider', 'API_URL' ,function($stateProvider, $urlRouterProvider, $authProvider, API_URL) {
 
             // Satellizer configuration that specifies which API
             // route the JWT should be retrieved from
@@ -39,11 +39,13 @@
                   controller: 'RegisterController as register'
 
                 });
-        })
+        }])
 
         .config(['$httpProvider', function($httpProvider) {
           $httpProvider.interceptors.push('myInterceptors');
 }]);
+
+  angular.module("app").constant("API_URL", 'http://localhost/api/api');
 
 
 })();

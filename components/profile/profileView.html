@@ -1,50 +1,50 @@
 <div ng-show="profile.data">
 
 
-<div class="col-md-3 col-sm-5">
+        <div class="col-md-3 col-sm-5">
 
-         <div class="profile-avatar">
-           <img src="img/avatars/ataide.jpeg" class="profile-avatar-img thumbnail" alt="Profile Image">
-           <button type="button" name="button" ng-click="profile.openPictureUpdateModal()">edit</button>
-         </div> <!-- /.profile-avatar -->
+             <div class="profile-avatar">
+               <img src="img/avatars/ataide.jpeg" class="profile-avatar-img thumbnail" alt="Profile Image">
+               <button type="button" name="button" ng-click="profile.openPictureUpdateModal()">edit</button>
+             </div> <!-- /.profile-avatar -->
 
-         <div class="list-group">
+             <div class="list-group">
 
-           <a href="javascript:;" class="list-group-item">
-             <i class="fa fa-asterisk text-primary"></i> &nbsp;&nbsp;Activity Feed
+               <a href="javascript:;" class="list-group-item">
+                 <i class="fa fa-asterisk text-primary"></i> &nbsp;&nbsp;Activity Feed
 
-             <i class="fa fa-chevron-right list-group-chevron"></i>
-           </a>
+                 <i class="fa fa-chevron-right list-group-chevron"></i>
+               </a>
 
-           <a href="javascript:;" class="list-group-item">
-             <i class="fa fa-book text-primary"></i> &nbsp;&nbsp;Projects
+               <a href="javascript:;" class="list-group-item">
+                 <i class="fa fa-book text-primary"></i> &nbsp;&nbsp;Projects
 
-             <i class="fa fa-chevron-right list-group-chevron"></i>
-             <span class="badge">3</span>
-           </a>
+                 <i class="fa fa-chevron-right list-group-chevron"></i>
+                 <span class="badge">3</span>
+               </a>
 
-           <a href="javascript:;" class="list-group-item">
-             <i class="fa fa-envelope text-primary"></i> &nbsp;&nbsp;Messages
+               <a href="javascript:;" class="list-group-item">
+                 <i class="fa fa-envelope text-primary"></i> &nbsp;&nbsp;Messages
 
-             <i class="fa fa-chevron-right list-group-chevron"></i>
-           </a>
+                 <i class="fa fa-chevron-right list-group-chevron"></i>
+               </a>
 
-           <a href="javascript:;" class="list-group-item">
-             <i class="fa fa-group text-primary"></i> &nbsp;&nbsp;Friends
+               <a href="javascript:;" class="list-group-item">
+                 <i class="fa fa-group text-primary"></i> &nbsp;&nbsp;Friends
 
-             <i class="fa fa-chevron-right list-group-chevron"></i>
-           </a>
+                 <i class="fa fa-chevron-right list-group-chevron"></i>
+               </a>
 
-           <a href="javascript:;" class="list-group-item">
-             <i class="fa fa-cog text-primary"></i> &nbsp;&nbsp;Settings
+               <a href="javascript:;" class="list-group-item">
+                 <i class="fa fa-cog text-primary"></i> &nbsp;&nbsp;Settings
 
-             <i class="fa fa-chevron-right list-group-chevron"></i>
-           </a>
-         </div> <!-- /.list-group -->
+                 <i class="fa fa-chevron-right list-group-chevron"></i>
+               </a>
+             </div> <!-- /.list-group -->
 
 
 
-       </div> <!-- /.col -->
+        </div> <!-- /.col -->
 
 
 
@@ -71,313 +71,133 @@
 
 
          <br><br>
+       </div>
 
-         <h4 class="content-title"><u>Activity Feed</u></h4>
+      <!--Right Bar-->
+       <div class="col-md-3">
+         <h5 class="content-title"><u>Social Stats</u></h5>
 
-           <div class="share-widget clearfix">
+         <div class="list-group">
 
-             <textarea class="form-control share-widget-textarea" rows="3" placeholder="Share what you've been up to..." tabindex="1"></textarea>
-
-             <div class="share-widget-actions">
-               <div class="share-widget-types pull-left">
-                 <a href="javascript:;" class="fa fa-picture-o ui-tooltip" title="Post an Image"><i></i></a>
-                 <a href="javascript:;" class="fa fa-video-camera ui-tooltip" title="Upload a Video"><i></i></a>
-                 <a href="javascript:;" class="fa fa-lightbulb-o ui-tooltip" title="Post an Idea"><i></i></a>
-                 <a href="javascript:;" class="fa fa-question-circle ui-tooltip" title="Ask a Question"><i></i></a>
-               </div>
-
-             <div class="pull-right">
-               <a class="btn btn-primary btn-sm" tabindex="2">Post</a>
-             </div>
-
-             </div> <!-- /.share-widget-actions -->
-
-           </div> <!-- /.share-widget -->
-
-           <br><br>
-
-           <div class="feed-item feed-item-idea">
-
-             <div class="feed-icon">
-               <i class="fa fa-lightbulb-o"></i>
-             </div> <!-- /.feed-icon -->
-
-             <div class="feed-subject">
-               <p><a href="javascript:;">Nikita Williams</a> shared an idea: <a href="javascript:;">Create an Awesome Idea</a></p>
-             </div> <!-- /.feed-subject -->
-
-             <div class="feed-content">
-               <ul class="icons-list">
-                 <li>
-                   <i class="icon-li fa fa-quote-left"></i>
-                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.
-                 </li>
-               </ul>
-             </div> <!-- /.feed-content -->
-
-             <div class="feed-actions">
-               <a href="javascript:;" class="pull-left"><i class="fa fa-thumbs-up"></i> 123</a>
-               <a href="javascript:;" class="pull-left"><i class="fa fa-comment-o"></i> 29</a>
-
-               <a href="javascript:;" class="pull-right"><i class="fa fa-clock-o"></i> 2 days ago</a>
-             </div> <!-- /.feed-actions -->
-
-           </div> <!-- /.feed-item -->
-
-
-
-           <div class="feed-item feed-item-image">
-
-             <div class="feed-icon">
-               <i class="fa fa-picture-o"></i>
-             </div> <!-- /.feed-icon -->
-
-             <div class="feed-subject">
-               <p><a href="javascript:;">Nikita Williams</a> posted the <strong>4 files</strong>: <a href="javascript:;">Annual Reports</a></p>
-             </div> <!-- /.feed-subject -->
-
-             <div class="feed-content">
-               <div class="thumbnail" style="width: 375px">
-                 <img src="./img/mockup.png" style="width: 100%;" alt="Gallery Image">
-               </div> <!-- /.thumbnail -->
-             </div> <!-- /.feed-content -->
-
-             <div class="feed-actions">
-               <a href="javascript:;" class="pull-left"><i class="fa fa-thumbs-up"></i> 123</a>
-               <a href="javascript:;" class="pull-left"><i class="fa fa-comment-o"></i> 29</a>
-
-               <a href="javascript:;" class="pull-right"><i class="fa fa-clock-o"></i> 2 days ago</a>
-             </div> <!-- /.feed-actions -->
-
-           </div> <!-- /.feed-item -->
-
-
-
-           <div class="feed-item feed-item-file">
-
-             <div class="feed-icon">
-               <i class="fa fa-cloud-upload"></i>
-             </div> <!-- /.feed-icon -->
-
-             <div class="feed-subject">
-               <p><a href="javascript:;">Nikita Williams</a> posted the <strong>4 files</strong>: <a href="javascript:;">Annual Reports</a></p>
-             </div> <!-- /.feed-subject -->
-
-             <div class="feed-content">
-               <ul class="icons-list">
-                 <li>
-                   <i class="icon-li fa fa-file-text-o"></i>
-                   <a href="javascript:;">Annual Report 2007</a> - annual_report_2007.pdf
-                 </li>
-
-                 <li>
-                   <i class="icon-li fa fa-file-text-o"></i>
-                   <a href="javascript:;">Annual Report 2008</a> - annual_report_2007.pdf
-                 </li>
-
-                 <li>
-                   <i class="icon-li fa fa-file-text-o"></i>
-                   <a href="javascript:;">Annual Report 2009</a> - annual_report_2007.pdf
-                 </li>
-
-                 <li>
-                   <i class="icon-li fa fa-file-text-o"></i>
-                   <a href="javascript:;">Annual Report 2010</a> - annual_report_2007.pdf
-                 </li>
-               </ul>
-             </div> <!-- /.feed-content -->
-
-             <div class="feed-actions">
-               <a href="javascript:;" class="pull-left"><i class="fa fa-thumbs-up"></i> 123</a>
-               <a href="javascript:;" class="pull-left"><i class="fa fa-comment-o"></i> 29</a>
-
-               <a href="javascript:;" class="pull-right"><i class="fa fa-clock-o"></i> 2 days ago</a>
-             </div> <!-- /.feed-actions -->
-
-           </div> <!-- /.feed-item -->
-
-
-
-           <div class="feed-item feed-item-bookmark">
-
-             <div class="feed-icon">
-               <i class="fa fa-bookmark"></i>
-             </div> <!-- /.feed-icon -->
-
-             <div class="feed-subject">
-               <p><a href="javascript:;">Nikita Williams</a> bookmarked a page on Delicious: <a href="javascript:;">Jumpstart Themes</a></p>
-             </div> <!-- /.feed-subject -->
-
-             <div class="feed-content">
-             </div> <!-- /.feed-content -->
-
-             <div class="feed-actions">
-               <a href="javascript:;" class="pull-left"><i class="fa fa-thumbs-up"></i> 123</a>
-               <a href="javascript:;" class="pull-left"><i class="fa fa-comment-o"></i> 29</a>
-
-               <a href="javascript:;" class="pull-right"><i class="fa fa-clock-o"></i> 2 days ago</a>
-             </div> <!-- /.feed-actions -->
-
-           </div> <!-- /.feed-item -->
-
-
-
-           <div class="feed-item feed-item-question">
-
-             <div class="feed-icon">
-               <i class="fa fa-question"></i>
-             </div> <!-- /.feed-icon -->
-
-             <div class="feed-subject">
-               <p><a href="javascript:;">Nikita Williams</a> posted the question: <a href="javascript:;">Who can I call to get a new parking pass for the Rowan Building?</a></p>
-             </div> <!-- /.feed-subject -->
-
-             <div class="feed-content">
-               <ul class="icons-list">
-                 <li>
-                   <i class="icon-li fa fa-quote-left"></i>
-                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.
-                 </li>
-               </ul>
-             </div> <!-- /.feed-content -->
-
-             <div class="feed-actions">
-               <a href="javascript:;" class="pull-left"><i class="fa fa-thumbs-up"></i> 123</a>
-               <a href="javascript:;" class="pull-left"><i class="fa fa-comment-o"></i> 29</a>
-
-               <a href="javascript:;" class="pull-right"><i class="fa fa-clock-o"></i> 2 days ago</a>
-             </div> <!-- /.feed-actions -->
-
-           </div> <!-- /.feed-item -->
-
-           <br class="visible-xs">
-           <br class="visible-xs">
-
-         </div> <!-- /.col -->
-
-
-         <div class="col-md-3">
-           <h5 class="content-title"><u>Social Stats</u></h5>
-
-           <div class="list-group">
-
-             <a href="javascript:;" class="list-group-item">
-                 <h3 class="pull-right"><i class="fa fa-eye text-primary"></i></h3>
-                 <h4 class="list-group-item-heading">38,847</h4>
-                 <p class="list-group-item-text">Profile Views</p>
-               </a>
-
-             <a href="javascript:;" class="list-group-item">
-               <h3 class="pull-right"><i class="fa fa-facebook-square  text-primary"></i></h3>
-               <h4 class="list-group-item-heading">3,482</h4>
-               <p class="list-group-item-text">Facebook Likes</p>
+           <a href="javascript:;" class="list-group-item">
+               <h3 class="pull-right"><i class="fa fa-eye text-primary"></i></h3>
+               <h4 class="list-group-item-heading">38,847</h4>
+               <p class="list-group-item-text">Profile Views</p>
              </a>
 
-             <a href="javascript:;" class="list-group-item">
-               <h3 class="pull-right"><i class="fa fa-twitter-square  text-primary"></i></h3>
-               <h4 class="list-group-item-heading">5,845</h4>
-               <p class="list-group-item-text">Twitter Followers</p>
-             </a>
-           </div> <!-- /.list-group -->
+           <a href="javascript:;" class="list-group-item">
+             <h3 class="pull-right"><i class="fa fa-facebook-square  text-primary"></i></h3>
+             <h4 class="list-group-item-heading">3,482</h4>
+             <p class="list-group-item-text">Facebook Likes</p>
+           </a>
 
-           <br>
+           <a href="javascript:;" class="list-group-item">
+             <h3 class="pull-right"><i class="fa fa-twitter-square  text-primary"></i></h3>
+             <h4 class="list-group-item-heading">5,845</h4>
+             <p class="list-group-item-text">Twitter Followers</p>
+           </a>
+         </div> <!-- /.list-group -->
 
-           <h5 class="content-title"><u>Project Activity</u></h5>
+         <br>
 
-           <div class="well">
+         <h5 class="content-title"><u>Project Activity</u></h5>
 
-
-             <ul class="icons-list text-md">
-
-               <li>
-                 <i class="icon-li fa fa-location-arrow"></i>
-
-                 <strong>Rod</strong> uploaded 6 files.
-                 <br>
-                 <small>about 4 hours ago</small>
-               </li>
-
-               <li>
-                 <i class="icon-li fa fa-location-arrow"></i>
-
-                 <strong>Rod</strong> followed the research interest: <a href="javascript:;">Open Access Books in Linguistics</a>.
-                 <br>
-                 <small>about 23 hours ago</small>
-               </li>
-
-               <li>
-                 <i class="icon-li fa fa-location-arrow"></i>
-
-                 <strong>Rod</strong> added 51 papers.
-                 <br>
-                 <small>2 days ago</small>
-               </li>
-             </ul>
-
-           </div> <!-- /.well -->
-
-         </div> <!-- /.col -->
+         <div class="well">
 
 
-         <div id="styledModal" class="modal modal-styled fade">
+           <ul class="icons-list text-md">
 
-          <div class="modal-dialog">
+             <li>
+               <i class="icon-li fa fa-location-arrow"></i>
 
-            <div class="modal-content">
+               <strong>Rod</strong> uploaded 6 files.
+               <br>
+               <small>about 4 hours ago</small>
+             </li>
 
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h3 class="modal-title">Meu Profile</h3>
-              </div> <!-- /.modal-header -->
+             <li>
+               <i class="icon-li fa fa-location-arrow"></i>
 
-              <div class="modal-body">
-                <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+               <strong>Rod</strong> followed the research interest: <a href="javascript:;">Open Access Books in Linguistics</a>.
+               <br>
+               <small>about 23 hours ago</small>
+             </li>
 
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.&hellip;</p> -->
+             <li>
+               <i class="icon-li fa fa-location-arrow"></i>
 
+               <strong>Rod</strong> added 51 papers.
+               <br>
+               <small>2 days ago</small>
+             </li>
+           </ul>
 
-                  <h2>Inline form: control states</h2>
-                <form class="" role="form">
-                  <div class="form-group">
-                    <label for="focusedInput">Focused</label>
-                    <input class="form-control" id="focusedInput" type="text">
-                  </div>
-                  <div class="form-group">
-                    <label for="inputPassword">Disabled</label>
-                    <input class="form-control" id="disabledInput" type="text" disabled>
-                  </div>
-                  <div class="form-group has-success has-feedback">
-                    <label for="inputSuccess2">Input with success</label>
-                    <input type="text" class="form-control" id="inputSuccess2">
-                    <span class="glyphicon glyphicon-ok form-control-feedback"></span>
-                  </div>
-                  <div class="form-group has-warning has-feedback">
-                    <label for="inputWarning2">Input with warning</label>
-                    <input type="text" class="form-control" id="inputWarning2">
-                    <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
-                  </div>
-                  <div class="form-group has-error has-feedback">
-                    <label for="inputError2">Input with error</label>
-                    <input type="text" class="form-control" id="inputError2">
-                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
-                  </div>
-                </form>
+         </div> <!-- /.well -->
+
+       </div> <!-- /.col -->
 
 
 
 
-              </div> <!-- /.modal-body -->
-
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-success" ng-click="profile.saveChanges()">Salvar alterações</button>
-              </div> <!-- /.modal-footer -->
-
-            </div> <!-- /.modal-content -->
-
-          </div><!-- /.modal-dialog -->
-
-      </div><!-- /.modal -->
 
 
-</div>
+       <!--Modal-->
+       <div id="styledModal" class="modal modal-styled fade">
+
+        <div class="modal-dialog">
+
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h3 class="modal-title">Meu Profile</h3>
+            </div> <!-- /.modal-header -->
+
+            <div class="modal-body">
+              <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.&hellip;</p> -->
+
+
+                <h2>Inline form: control states</h2>
+              <form class="" role="form">
+                <div class="form-group">
+                  <label for="focusedInput">Focused</label>
+                  <input class="form-control" id="focusedInput" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword">Disabled</label>
+                  <input class="form-control" id="disabledInput" type="text" disabled>
+                </div>
+                <div class="form-group has-success has-feedback">
+                  <label for="inputSuccess2">Input with success</label>
+                  <input type="text" class="form-control" id="inputSuccess2">
+                  <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                </div>
+                <div class="form-group has-warning has-feedback">
+                  <label for="inputWarning2">Input with warning</label>
+                  <input type="text" class="form-control" id="inputWarning2">
+                  <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+                </div>
+                <div class="form-group has-error has-feedback">
+                  <label for="inputError2">Input with error</label>
+                  <input type="text" class="form-control" id="inputError2">
+                  <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+              </form>
+
+
+
+
+            </div> <!-- /.modal-body -->
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success" ng-click="profile.saveChanges()">Salvar alterações</button>
+            </div> <!-- /.modal-footer -->
+
+          </div> <!-- /.modal-content -->
+
+        </div><!-- /.modal-dialog -->
+
+       </div><!-- /.modal -->
