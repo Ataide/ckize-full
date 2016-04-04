@@ -6,9 +6,9 @@
     .module('app')
     .controller('RegisterController', RegisterController);
 
-    RegisterController.$inject = ['$http','$state'];
+    RegisterController.$inject = ['$http','$state','$auth'];
 
-    function RegisterController($http,$state){
+    function RegisterController($http,$state,$auth){
       var vm = this;
 
       $('body').removeClass('page-signin');
@@ -22,7 +22,6 @@
           password: vm.user_password
         };
 
-        //Use Satellizer's $auth service to signup
         $auth.signup(credentials).then(function(response){
           $state.go('login', {});
           alert('Registro Realizado com sucesso. Você poderá se logar agora.');

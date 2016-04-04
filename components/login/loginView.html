@@ -1,8 +1,7 @@
-<video autoplay  poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" loop>
-  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<!-- <video autoplay  poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" loop>
 <source src="//demosthenes.info/assets/videos/downtown-los-angeles.webm" type="video/webm">
 <source src="//demosthenes.info/assets/videos/downtown-los-angeles.mp4" type="video/mp4">
-</video>
+</video> -->
 <style>
 .slide-hide, .slide-show {
     -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
@@ -44,81 +43,15 @@ transition: 1s opacity;
 body{
   overflow: hidden; !important;
 }
+
 </style>
-<div ng-show="!auth.login">
 
-    <div class="signup-container">
-    		<!-- Header -->
-    		<div class="signup-header">
-    			<a href="index.html" class="logo">
-    				<img src="assets/demo/logo-big.png" alt="" style="margin-top: -5px;">&nbsp;
-    				PixelAdmin
-    			</a> <!-- / .logo -->
-    			<div class="slogan">
-    				Simple. Flexible. Powerful.
-    			</div> <!-- / .slogan -->
-    		</div>
-    		<!-- / Header -->
-
-    		<!-- Form -->
-    		<div class="signup-form">
-    			<form>
-
-    				<div class="signup-text">
-    					<span>Crie sua Conta!!</span>
-    				</div>
-
-    				<div class="form-group w-icon">
-    					<input class="form-control input-lg" ng-model="register.user_name" placeholder="Seu Nome" type="text">
-    					<span class="fa fa-info signup-form-icon"></span>
-    				</div>
-
-    				<div class="form-group w-icon">
-    					<input class="form-control input-lg" ng-model="register.user_email" placeholder="E-mail" type="text">
-    					<span class="fa fa-envelope signup-form-icon"></span>
-    				</div>
-
-    				<div class="form-group w-icon">
-    					<input class="form-control input-lg" ng-model="register.user_password" placeholder="Password" type="password">
-    					<span class="fa fa-lock signup-form-icon"></span>
-    				</div>
-
-    				<div class="form-group" style="margin-top: 20px;margin-bottom: 20px;">
-    					<label class="checkbox-inline">
-    						<input name="signup_confirm" class="px" id="confirm_id" type="checkbox">
-    						<span class="lbl">I agree with the <a href="#" target="_blank">Terms and Conditions</a></span>
-    					</label>
-    				</div>
-
-    				<div class="form-actions">
-    					<input value="Registrar" ng-click="register.register()" class="signup-btn bg-primary" type="button">
-    				</div>
-    			</form>
-    			<!-- / Form -->
-
-
-    			<!-- "Sign In with" block -->
-    			<div class="signup-with">
-    				<!-- Facebook -->
-    				<a href="index.html" class="signup-with-btn" style="background:#4f6faa;background:rgba(79, 111, 170, .8);">Quer usar seu <span>Facebook?</span></a>
-    			</div>
-    			<!-- / "Sign In with" block -->
-    		</div>
-    		<!-- Right side -->
-    	</div>
-    <div class="have-account">
-    	Já tem uma conta? Faça seu <a href="" ng-click="auth.changeView()">Login</a> já.
-    </div>
-
-
-</div>
-<div ng-show="auth.login">
   <!-- Container -->
   <div class="page-signin signin-container">
 
     <!-- Left side -->
     <div class="signin-info">
-      <a href="index.html" class="logo">
+      <a href="" class="logo">
         <img src="img/logo.png" width="35" height="35" alt="" style="margin-top: -5px;">&nbsp;
         cKize.com
       </a> <!-- / .logo -->
@@ -180,7 +113,7 @@ body{
     </div> <!-- / Password -->
 
     <div class="form-actions">
-      <input type="submit" value="SIGN IN" class="signin-btn bg-primary" ng-click="auth.login(loginForm)" ng-disabled="a.loading">
+      <input type="submit" value="SIGN IN" class="signin-btn bg-primary" ng-click="auth.login(loginForm)">
       <a href="#" class="forgot-password" id="forgot-password-link">Forgot your password?</a>
     </div> <!-- / .form-actions -->
   </form>
@@ -189,7 +122,7 @@ body{
   <!-- "Sign In with" block -->
   <div class="signin-with">
     <!-- Facebook -->
-    <a href="index.html" class="signin-with-btn" style="background:#4f6faa;background:rgba(79, 111, 170, .8);">Sign In with <span>Facebook</span></a>
+    <a href="" class="signin-with-btn" style="background:#4f6faa;background:rgba(79, 111, 170, .8);">Use sua conta do <span>Facebook</span></a>
   </div>
   <!-- / "Sign In with" block -->
 
@@ -217,10 +150,9 @@ body{
   </div>
   <!-- / Password reset form -->
 </div>
-<!-- Right side -->
+
 </div>
-  <!-- / Container -->
+
   <div class="not-a-member">
-  Não tem conta? <a href="" ng-click="auth.changeView()">Crie já a sua.</a>
+  Não tem conta? <a ui-sref="register">Crie já a sua.</a>
   </div>
-</div>

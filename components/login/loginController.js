@@ -13,7 +13,7 @@
 
         var vm = this;
         vm.login = true;
-        vm.changeView = changeView;
+        
 
         $scope.$on('cfpLoadingBar:completed', function () {
             vm.loading = false;
@@ -62,20 +62,6 @@
           }
 
         };
-
-        function changeView(){
-          vm.login = !vm.login;
-
-          if(vm.login){
-            $('body').removeClass('page-signup');
-            $('body').addClass('page-signin');
-          }else{
-            $('body').removeClass('page-signin');
-            $('body').addClass('page-signup');
-
-          }
-
-        }
 
     }
 

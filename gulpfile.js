@@ -29,9 +29,10 @@ gulp.task('jslint', function() {
     .pipe(jshint.reporter('jshint-stylish'));
 
 });
+
 gulp.task('watch', ['browser-sync'], function () {
   gulp.watch(['components/**/*.js','shared/**/*.js'], ['jslint', 'browsersync-reload']);
-  gulp.watch(['components/**/*.js','shared/**/*.html'], ['browsersync-reload']);
+  gulp.watch(['components/**/*.js','components/**/*.html','shared/**/*.js','shared/**/*.html'], ['browsersync-reload']);
 });
 
 
