@@ -1,6 +1,6 @@
 <h4 class="content-title"><u>Activity Feed</u></h4>
 
-<div class="share-widget clearfix">
+<div class="share-widget clearfix" ng-init="home.getPosts()">
 
     <textarea class="form-control share-widget-textarea" ng-model="home.post.body" rows="3" placeholder="Share what you've been up to..." tabindex="1"></textarea>
 

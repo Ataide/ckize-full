@@ -17,16 +17,24 @@
         vm.users = {};
         vm.error = {};
         vm.message = '';
+        vm.getPosts = getPosts;
+        vm.getFriendsRequests = getAllFriendsRequests;
+        vm.getFriendsList = getFriendsList;
+        vm.getUsersList = getFriendsList;
+        vm.removeFriend = removeFriend;
+
+        function removeFriend(id){
+          userFactory.removeFriendshipWith(id)
+            .then(function(response){
+              console.log(response);
+              getFriendsList();
+            });
+        }
 
         userFactory.getUserProfile().then(function(data){
           vm.post.poster_firstname = data.display_name;
         });
 
-        function getPosts() {
-            $http.get('http://localhost/api/api/posts').success(function(data) {
-                vm.posts = data;
-            });
-        };
 
         vm.goTest = function() {
             $http.post('http://localhost/api/api/posts', vm.post).success(function(data) {
@@ -41,8 +49,20 @@
           });
         };
 
+        vm.requestFriend = function(id) {
+          userFactory.createFriendshipRequestWith(id)
+          .then(function(response){
+            console.log(response);
+          });
+        };
 
-
+        vm.rejectFriendRequest = function(id){
+          userFactory.removeFriendshipRequestWith(id)
+            .then(function(response){
+              getAllFriendsRequests();
+              alert(id);
+            });
+        };
 
 
 
@@ -50,18 +70,27 @@
             return $auth.isAuthenticated();
         };
 
-        // vm.getUsers = function() {
-        //
-        //     // This request will hit the index method in the AuthenticateController
-        //     // on the Laravel side and will return the list of users
-        //     $http.get('api/authenticate').success(function(users) {
-        //         vm.users = users;
-        //     }).error(function(error) {
-        //         vm.error = error;
-        //     });
-        // };
 
-        getPosts();
+        function getPosts() {
+            $http.get('http://localhost/api/api/posts').success(function(data) {
+                vm.posts = data;
+            });
+        }
+
+        function getFriendsList(){
+          userFactory.getFriendsList()
+            .then(function(response){
+               vm.friendsList = response;
+            });
+        }
+
+        function getAllFriendsRequests() {
+          userFactory.getFriendsRequests()
+            .then(function(response){
+              vm.requestFriendList = response;
+            });
+        }
+
     }
 
 })();

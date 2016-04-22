@@ -42,6 +42,18 @@
                 controller: 'HomeController as home'
             })
 
+            .state('home.friend-requests', {
+              url:'/friend-requests',
+              templateUrl: 'components/home/friends/friend-requests.html',
+              controller: 'HomeController as home'
+            })
+
+            .state('home.users', {
+                url: '/users',
+                templateUrl: 'components/home/users/users.html',
+                controller: 'HomeController as home'
+            })
+
             .state('profile', {
                     url: '/profile',
                     templateUrl: 'components/profile/profileView.html',
@@ -69,9 +81,9 @@
                     event.preventDefault();
                     $state.go('home.feeds');
                 } else {
-                    return
+                    return;
                 }
-            })
+            });
     }]);
 
     angular.module("app").constant("API_URL", 'http://localhost/api/api');
@@ -95,7 +107,7 @@
                             callback.apply(socket, args);
                         }
                     });
-                })
+                });
             }
         };
     });

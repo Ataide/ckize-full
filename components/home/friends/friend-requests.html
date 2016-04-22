@@ -1,0 +1,13 @@
+<h5 class="content-title"><u>Solicitações de amizades</u></h5>
+
+<ul class="list-group" ng-init="home.getFriendsRequests()">
+    <li class="list-group-item" ng-repeat="user in home.requestFriendList">
+        {{user.name}}
+        <div class="pull-right">
+
+            <button class="btn btn-xs btn-success" ng-click="home.acceptFriendRequest(user.id)">Aceitar</button>
+            <button class="btn btn-xs btn-danger" ng-click="home.rejectFriendRequest(user.id)">Rejeitar</button>
+        </div>
+    </li>
+
+</ul>

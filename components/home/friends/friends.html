@@ -1,12 +1,13 @@
-<h1>Friends</h1>
+  <h5 class="content-title"><u>Meus amigos</u></h5>
 
-<ul class="list-group" ng-init="home.getUsers()">
-  <li class="list-group-item" ng-repeat="user in home.users">
-    {{user.name}}
-    <div class="pull-right">
+  <ul class="list-group" ng-init="home.getFriendsList()">
 
-      <button class="btn btn-xs btn-success">Seguir</button>
-    </div>
-  </li>
+    <li class="list-group-item" ng-repeat="friend in home.friendsList">
+      {{friend.name}}
+      <div class="pull-right">
 
-</ul>
+        <button class="btn btn-xs btn-danger" ng-click="home.removeFriend(friend.id)">Terminar</button>
+      </div>
+    </li>
+
+  </ul>
