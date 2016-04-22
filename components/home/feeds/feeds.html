@@ -1,0 +1,58 @@
+<h4 class="content-title"><u>Activity Feed</u></h4>
+
+<div class="share-widget clearfix">
+
+    <textarea class="form-control share-widget-textarea" ng-model="home.post.body" rows="3" placeholder="Share what you've been up to..." tabindex="1"></textarea>
+
+    <div class="share-widget-actions">
+        <div class="share-widget-types pull-left">
+            <a data-original-title="Post an Image" href="javascript:;" class="fa fa-picture-o ui-tooltip" title=""><i></i></a>
+            <a data-original-title="Upload a Video" href="javascript:;" class="fa fa-video-camera ui-tooltip" title=""><i></i></a>
+            <a data-original-title="Post an Idea" href="javascript:;" class="fa fa-lightbulb-o ui-tooltip" title=""><i></i></a>
+            <a data-original-title="Ask a Question" href="javascript:;" class="fa fa-question-circle ui-tooltip" title=""><i></i></a>
+        </div>
+
+        <div class="pull-right">
+            <a class="btn btn-primary btn-sm" tabindex="2" ng-click="home.goTest();">Post</a>
+        </div>
+
+    </div>
+    <!-- /.share-widget-actions -->
+
+</div>
+<!-- /.share-widget -->
+
+<br>
+<br>
+
+<div class="feed-item feed-item-idea" ng-repeat="post in home.posts | orderBy:'-created_at'">
+    <div class="feed-icon">
+        <i class="fa fa-lightbulb-o"></i>
+    </div>
+    <!-- /.feed-icon -->
+    <div class="feed-subject">
+        <p><a href="javascript:;">{{post.poster_firstname}}</a> shared an idea: <a href="javascript:;">Create an Awesome Idea</a></p>
+    </div>
+    <!-- /.feed-subject -->
+    <div class="feed-content">
+        <ul class="icons-list">
+            <li>
+                <i class="icon-li fa fa-quote-left"></i>{{post.body}}
+            </li>
+        </ul>
+    </div>
+    <!-- /.feed-content -->
+
+    <div class="feed-actions">
+        <a href="javascript:;" class="pull-left"><i class="fa fa-thumbs-up"></i> 123</a>
+        <a href="javascript:;" class="pull-left"><i class="fa fa-comment-o"></i> 29</a>
+
+        <a href="javascript:;" class="pull-right"><i class="fa fa-clock-o"></i> <span am-time-ago="post.created_at"></span></a>
+    </div>
+    <!-- /.feed-actions -->
+
+</div>
+<!-- /.feed-item -->
+
+<br class="visible-xs">
+<br class="visible-xs">

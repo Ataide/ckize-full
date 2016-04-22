@@ -18,23 +18,17 @@
   </head>
   <body ng-app="app">
 
-    <div id="wrapper" ng-controller="MainController">
+    <div id="wrapper" ng-controller="MainController as main">
 
     <div ng-include="'shared/navbar/navbar.html'" ng-cloak ng-if="isAuthenticated()"></div>
 
-    <div class="content">
-      <div class="container">
-        <div class="row">
-          <div ui-view></div>
+      <div class="content">
+        <div class="container">
+          <div class="row">
+            <div ui-view></div>
+          </div>
         </div>
       </div>
-    </div>
-
-
-
-
-
-
 
   </body>
 
@@ -52,6 +46,12 @@
   <script src="bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
   <script src="bower_components/ng-img-crop/compile/minified/ng-img-crop.js"></script>
   <script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+  <script src="bower_components/moment/moment.js" charset="utf-8"></script>
+  <script src="bower_components/moment/locale/pt-br.js" charset="utf-8"></script>
+  <script src="bower_components/angular-moment/angular-moment.js" charset="utf-8"></script>
+
+  <script src="http://momentjs.com/downloads/moment-with-locales.min.js"></script>
+  <script src="scripts/socketio.min.js"></script>
 
 
   <!-- scripts da Aplicação -->

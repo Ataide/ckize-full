@@ -5,14 +5,16 @@
     .module('app')
     .factory('userFactory' , userFactory);
 
-    userFactory.$inject = ['$http' , 'API_URL','Upload'];
+    userFactory.$inject = ['$http' , 'API_URL','Upload','chatService'];
 
-    function userFactory($http, API_URL,Upload) {
+    function userFactory($http, API_URL,Upload,chatService) {
+
       return {
         getUsers: getUsers,
         getUserProfile: getUserProfile,
         updateUserProfile: updateUserProfile,
         updateUserPicture: updateUserPicture
+
       };
 
       function getUsers() {
@@ -23,10 +25,11 @@
         function getUsersComplete(response){
           return response.data.results;
         }
-        function getUsersFailed(error){
 
+        function getUsersFailed(error){
         }
-      }
+
+      };
 
       function getUserProfile() {
         return $http.get(API_URL+ '/user/profile')

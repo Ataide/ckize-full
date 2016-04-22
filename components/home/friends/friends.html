@@ -1,0 +1,12 @@
+<h1>Friends</h1>
+
+<ul class="list-group" ng-init="home.getUsers()">
+  <li class="list-group-item" ng-repeat="user in home.users">
+    {{user.name}}
+    <div class="pull-right">
+
+      <button class="btn btn-xs btn-success">Seguir</button>
+    </div>
+  </li>
+
+</ul>

@@ -13,7 +13,7 @@
 
         var vm = this;
         vm.login = true;
-        
+
 
         $scope.$on('cfpLoadingBar:completed', function () {
             vm.loading = false;
@@ -40,7 +40,6 @@
         vm.login = function(loginForm) {
 
           if(loginForm.$valid) {
-
             var credentials = {
               email: vm.email,
               password: vm.password
@@ -48,7 +47,7 @@
 
             $auth.login(credentials).then(function(data) {
               $('body').removeClass('page-signin');
-              $state.go('home', {});
+              $state.go('home.feeds', {});
             }).catch(function (response) {
               vm.error = 'Usuário ou Senha Inválido(s)';
 
